@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -36,7 +37,6 @@ import org.testng.Reporter;
 
 import junit.framework.Assert;
 
-
 public class AppLibrary {
 
 	public final long GLOBALTIMEOUT = 20;
@@ -56,6 +56,10 @@ public class AppLibrary {
 	public Configuration getConfig() {
 		return config;
 	}
+	
+	
+	
+	
 
 	public WebDriver getDriverInstance() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
@@ -278,7 +282,13 @@ public class AppLibrary {
 	public void clickElement(String locator) throws Exception {
 		findElement(locator).click();
 	}
-
+	
+	public void gotoUrl(String url) throws Exception {
+		driver.get(url);
+	}
+	
+	
+	
 	public WebElement findElement(String locatorString) {
 		return getElement(locatorString, false, false, false);
 	}
@@ -290,7 +300,7 @@ public class AppLibrary {
 	}
 
 	public WebElement clickByJavascript(String objectLocator) throws Exception {
-		return getElement(objectLocator, false, true, false);
+		return 	getElement(objectLocator, false, true, false);
 	}
 
 	public void waitUntilElementDisplayed(String locatorString) {
@@ -428,7 +438,8 @@ public class AppLibrary {
 			Assert.assertEquals(findElement(locator).getAttribute("value"), value);
 		}
 	}
-
+	
+	
 	public void verifyText(String locator, String value) {
 		String text = findElement(locator).getText();
 		Assert.assertEquals(text, value);
@@ -470,8 +481,33 @@ public class AppLibrary {
 	
 	
 	
+	
+	public static int randInt() {
+		int min = 1;
+		int max = 999;
+		Random rand = new Random();
+		int randomNum = (rand.nextInt((max - min) + 1) + rand.nextInt((max - min) + 1)) / 2;
+		return randomNum;
+		}
+	
+	
+	
 	public void  switchToIframe(String locator) {
 		driver.switchTo().frame(findElement(locator));
+	}
+	
+	public String  getUrlOfPage() {
+		String url=driver.getCurrentUrl();
+		return url;
+		
+		
+	}
+	
+	public void  waitTillElementisDisplayed(String locator) {
+		WebDriverWait wait = new WebDriverWait(driver, 120);
+
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className(locator))));
+	
 	}
 	
 	
