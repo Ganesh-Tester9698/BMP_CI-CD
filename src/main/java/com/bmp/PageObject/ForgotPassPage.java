@@ -23,21 +23,15 @@ public class ForgotPassPage {
 	public static String emailLogin = "id:txtEmail";
 	public static String passLogin = "id:txtPassword";
 	public static String msgbody = "id:msg_body";
-	public static String profile="id:profile-div";
-	public static String logout="link:Logout";
-	
+	public static String profile = "id:profile-div";
+	public static String logout = "link:Logout";
 
 	public ForgotPassPage(AppLibrary appLibrary) throws Exception {
 		this.appLibrary = appLibrary;
 		appLibrary.getCurrentDriverInstance();
 	}
 
-	public ForgotPassPage forgotPass(String email,String newPassw) throws Exception {
-				
-
-		
-		
-		
+	public ForgotPassPage forgotPass(String email, String newPassw) throws Exception {
 
 		appLibrary.clickElement(FPLink);
 		appLibrary.enterText(EmailofForgot, email);
@@ -55,33 +49,28 @@ public class ForgotPassPage {
 
 		appLibrary.enterText(emailLogin, email);
 		appLibrary.enterText(passLogin, tempPassword);
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 
 		appLibrary.clickElement(LoginOnforgot);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		appLibrary.enterText(newPass, newPassw);
 		appLibrary.enterText(confirmPass, newPassw);
 		appLibrary.clickElement(reset);
-		
-		
-		if( appLibrary.findElement("link:Skip").isDisplayed()){
-			appLibrary.findElement("link:Skip").click();
-			
-			appLibrary.clickElement(profile);
-			appLibrary.clickElement(logout);
-		
+
+		if (appLibrary.findElement("link:Skip").isDisplayed()) {
+
+			Registration_Page.skipthetour();
+			appLibrary.findElement(Registration_Page.CreatNewTest);
+			Registration_Page.logout();
+		} else {
+			appLibrary.findElement(Registration_Page.CreatNewTest);
+			Registration_Page.logout();
+
 		}
-		else
-		{
-	
-		
-		appLibrary.clickElement(profile);
-		appLibrary.clickElement(logout);
+
 		
 		
 
-	}
 		return new ForgotPassPage(appLibrary);
 	}
 }
-

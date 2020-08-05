@@ -1,5 +1,6 @@
 package com.bmp.Library;
 
+import org.testng.AssertJUnit;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -13,7 +14,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -35,12 +36,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import junit.framework.Assert;
+import com.sun.jna.platform.FileUtils;
 
 public class AppLibrary {
 
-	public final long GLOBALTIMEOUT = 20;
-	private WebDriver driver;
+	public final static long GLOBALTIMEOUT = 20;
+	public static WebDriver driver;
 	private Configuration config;
 	public String baseUrl;
 	public String browser;
@@ -271,7 +272,7 @@ public class AppLibrary {
 		}
 
 		if (verifyAbsent && element != null)
-			org.testng.Assert.assertTrue(false, "Expected element to be absent, but it was found on the page");
+			//AssertJUnit.assertTrue(false, "Expected element to be absent, but it was found on the page");
 
 		if (visibility)
 			element = wait.until(ExpectedConditions.visibilityOfElementLocated(locatorBy));
@@ -332,7 +333,7 @@ public class AppLibrary {
 			}
 		}
 		if (flag) {
-			Assert.assertTrue("Option " + value + " was not found in the select", false);
+			AssertJUnit.assertTrue("Option " + value + " was not found in the select", false);
 		}
 	}
 
@@ -384,10 +385,16 @@ public class AppLibrary {
 	}
 
 	public void enterText(String locator, String text) throws Exception {
-		findElement(locator).click();
+		//findElement(locator).click();
 		findElement(locator).clear();
 		findElement(locator).sendKeys(text);
 	}
+	
+	public void enterInput(String locator, String text) throws Exception {
+		//findElement(locator).click();
+		findElement(locator).sendKeys(text);
+	}
+	
 
 	public boolean verifyCheckBox(String locator) {
 		return findElement(locator).isSelected();
@@ -433,21 +440,21 @@ public class AppLibrary {
 
 	public void verifyTextField(String locator, String value) {
 		if (value.equalsIgnoreCase("NA")) {
-			Assert.assertEquals(findElement(locator).getAttribute("value"), "");
+			AssertJUnit.assertEquals(findElement(locator).getAttribute("value"), "");
 		} else {
-			Assert.assertEquals(findElement(locator).getAttribute("value"), value);
+			AssertJUnit.assertEquals(findElement(locator).getAttribute("value"), value);
 		}
 	}
 	
 	
 	public void verifyText(String locator, String value) {
 		String text = findElement(locator).getText();
-		Assert.assertEquals(text, value);
+		AssertJUnit.assertEquals(text, value);
 	}
 
 	public boolean waitTillElementLoaded(String locator) {
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-		int counter = 10;
+		int counter = 90;
 		do {
 			try {
 				if (findElement(locator) != null) {
@@ -474,7 +481,7 @@ public class AppLibrary {
 		driver = getCurrentDriverInstance();
 		String path = "screenshots/" + name;
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File(path));
+		//FileUtils.copyFile(src, new File(path));
 		autoLogger("screenshot at :" + path);
 		autoLogger("screenshot for " + name + " available at :" + path);
 	}
@@ -484,7 +491,7 @@ public class AppLibrary {
 	
 	public static int randInt() {
 		int min = 1;
-		int max = 999;
+		int max = 9999;
 		Random rand = new Random();
 		int randomNum = (rand.nextInt((max - min) + 1) + rand.nextInt((max - min) + 1)) / 2;
 		return randomNum;
@@ -509,6 +516,45 @@ public class AppLibrary {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className(locator))));
 	
 	}
+	
+	
+	
+	public static boolean waitTillDataLoaded(String locator, String attribute, String expectedData)
+			throws Exception {
+
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		int counter = 90;
+		String data = new String();
+		do {
+
+			try {
+
+				data = driver.findElement(By.xpath(locator)).getAttribute(attribute);
+
+				if (expectedData.equalsIgnoreCase("")) {
+					System.out.println("Element was loaded with data:" + data + "| Expected:Blank");
+					return true;
+				} else {
+					if (data.equalsIgnoreCase(expectedData) || data.contains(expectedData)) {
+						System.out.println("Element was loaded with data:" + data + "| Expected:" + expectedData);
+						return true;
+					} else {
+						Thread.sleep(1000);
+					}
+				}
+			} catch (Exception e) {
+				Thread.sleep(1000);
+			}
+			counter--;
+			//System.out.println(counter);
+		} while (counter > 0);
+
+		driver.manage().timeouts().implicitlyWait(GLOBALTIMEOUT, TimeUnit.SECONDS);
+		throw new RuntimeException("Element was not loaded with data:" + locator + "| Data:" + expectedData);
+	}
+
+	
+	
 	
 	
 }

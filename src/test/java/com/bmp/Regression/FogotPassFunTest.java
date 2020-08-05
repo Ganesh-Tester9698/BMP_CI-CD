@@ -14,8 +14,6 @@ public class FogotPassFunTest extends TestBase {
 	public static String loginButt = "id:kc-login";
 	public static String CreatNewTest = "xpath://button[text()='Create Test']";
 
-
-
 	@BeforeClass
 	public void setUp() throws Exception {
 		appLibrary = new AppLibrary("FogotPassFunTest");
@@ -23,25 +21,36 @@ public class FogotPassFunTest extends TestBase {
 
 	@Test
 	public void forgotPass() throws Exception {
-		String newPass="test123";
+		String newPass = "test123";
 		appLibrary.getDriverInstance();
 		appLibrary.launchApp();
-		String unique = appLibrary.getFormattedDate() + "_" + appLibrary.randInt();
-		String emailAddress = "neoTest_" + unique + "@mailinator.com";
-		System.out.println(emailAddress);
+		String unique = "qa_" + AppLibrary.randInt() + "@mailinator.com";
+		System.out.println(unique);
 
-		appLibrary.getDriverInstance();
+		// appLibrary.getDriverInstance();
 		appLibrary.launchApp();
 		appLibrary.clickElement(Registration_Page.registerButt);
 
-		new Registration_Page(appLibrary).register(emailAddress, "test12", "test12");
+		new Registration_Page(appLibrary).register(unique, "test12", "test12");
 
-		new ForgotPassPage(appLibrary).forgotPass(emailAddress,newPass);
+		if (appLibrary.findElement("link:Skip").isDisplayed()) {
 
-		appLibrary.enterText(emailLogin, emailAddress);
+			Registration_Page.skipthetour();
+			appLibrary.findElement(CreatNewTest);
+			Registration_Page.logout();
+		} else {
+			appLibrary.findElement(CreatNewTest);
+			Registration_Page.logout();
+
+		}
+
+		new ForgotPassPage(appLibrary).forgotPass(unique, newPass);
+
+		appLibrary.enterText(emailLogin, unique);
 		appLibrary.enterText(passLogin, newPass);
 		appLibrary.clickElement(loginButt);
 		appLibrary.findElement(CreatNewTest);
+		System.out.println("Forgpt password fun test passsed");
 
 	}
 

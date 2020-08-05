@@ -9,27 +9,30 @@ import com.bmp.PageObject.Registration_Page;
 
 public class RegisterFunctionalTest extends TestBase {
 	
-	
+
 	@BeforeClass
 	public void setUp() throws Exception {
 		appLibrary = new AppLibrary("RegisterFunctionalTest");
 	}
 
+	
 	@Test
+	
+	
 	public void registrationTest() throws Exception {
 		
-		String unique = appLibrary.getFormattedDate() + "_" + appLibrary.randInt();
-		String emailAddress = "neoTest_" + unique;
-		System.out.println(emailAddress);
 		
-		
+		String unique = "qa_" + AppLibrary.randInt()+"@mailinator.com";
 		
 		
 		appLibrary.getDriverInstance();
 		appLibrary.launchApp();
-		appLibrary.clickElement(Registration_Page.Signupbutt);
 		
-		new Registration_Page(appLibrary).register(emailAddress+"@mailinator.com", "test12", "test12");
+		
+		System.out.println("Email :" +unique);
+		System.out.println();
+		
+		new Registration_Page(appLibrary).register(unique, "test12", "test12");
 		
 		
 		System.out.println("Registration functional test passed");

@@ -14,7 +14,6 @@ public class LoginPage {
 		appLibrary.getCurrentDriverInstance();
 
 	}
-
 	public LoginPage login(String email, String password) throws Exception {
 		appLibrary.enterText(emailLogin, email);
 		appLibrary.enterText(passLogin, password);
@@ -22,6 +21,10 @@ public class LoginPage {
 		appLibrary.findElement(CreatNewTest);
 		return new LoginPage(appLibrary);
 
+
+	}
+	
+	
 	}
 
-}
+

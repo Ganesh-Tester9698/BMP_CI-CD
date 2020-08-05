@@ -12,13 +12,12 @@ public class LoginFunctionalTest extends TestBase {
 	public void setUp() throws Exception {
 		appLibrary = new AppLibrary("LoginFunctionalTest");
 	}
-
 	@Test
 	public void loginTest() throws Exception {
 		appLibrary.getDriverInstance();
 		appLibrary.launchApp();
 
-		new LoginPage(appLibrary).login("qa638@mailinator.com", "test12");
+		new LoginPage(appLibrary).login("qa638@mailinator.com", "test123");
 		System.out.println("Login functional test passed");
 
 	}
