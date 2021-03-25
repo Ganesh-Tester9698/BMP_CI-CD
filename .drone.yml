@@ -4,7 +4,7 @@ name: default
 steps: 
   - 
     environment: 
-      Uploadfilechk: true
+      Uploadfilechk: false
       apikey: 673e0985b554e480881605e1
       apisecret: f4077e40595c183537225e9f30a8c08f311d2166bcedb4336be7e49854cc6540e4c159a2
       createtest: false
