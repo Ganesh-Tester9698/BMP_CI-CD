@@ -1,0 +1,490 @@
+---
+execution:
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+- concurrency: 5
+  executor: jmeter
+  files:
+  - Dummy3.jmx
+  hold-for: 05m
+  keepalive: true
+  locations:
+    us-west-2: 5
+  ramp-up: 2m
+  scenario: Dummy3.jmx
+  steps: 1
+  timeout: 105s
+local-bzt-version: 1.15.1
+modules:
+  cloud:
+    account: 748809
+    browser-open: start
+    check-interval: 5s
+    default-location: us-central1-a
+    project: 874616
+    public-report: false
+    request-logging-limit: 10240
+    send-report-email: false
+    test: 9016057
+    timeout: 105s
+    workspace: 756963
+  consolidator:
+    percentiles:
+    - 50.0
+    - 90.0
+    - 95.0
+  jmeter:
+    plugins:
+    - jpgc-casutg
+    - jpgc-dummy
+    - jpgc-ffw
+    - jpgc-fifo
+    - jpgc-functions
+    - jpgc-json
+    - jpgc-perfmon
+    - jpgc-prmctl
+    - jpgc-tst
+    - jpgc-casutg
+    - jpgc-dummy
+    - jpgc-ffw
+    - jpgc-fifo
+    - jpgc-functions
+    - jpgc-json
+    - jpgc-perfmon
+    - jpgc-prmctl
+    - jpgc-tst
+    
+reporting:
+- module: final-stats
+- module: console
+- module: final-stats
+- module: console
+scenarios:
+  Dummy3.jmx:
+    script: Dummy3.jmx
+services:
+- local:
+  - metrics:
+    - cpu
+    - mem
+    - bytes-sent
+    - bytes-recv
+    - disk-read
+    - disk-write
+    - disk-space
+    - engine-loop
+    - conn-all
+  - &id001
+    metrics:
+    - cpu
+    - mem
+    - bytes-sent
+    - bytes-recv
+    - disk-read
+    - disk-write
+    - disk-space
+    - engine-loop
+    - conn-all
+  module: monitoring
+- local:
+  - *id001
+  module: monitoring
+settings:
+  default-executor: jmeter
+  env:
+    OBJC_DISABLE_INITIALIZE_FORK_SAFETY: 'YES'
+    TAURUS_ARTIFACTS_DIR: //Users/ashishk/Desktop/untitled folder
