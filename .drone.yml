@@ -9,7 +9,7 @@ steps:
       apisecret: f4077e40595c183537225e9f30a8c08f311d2166bcedb4336be7e49854cc6540e4c159a2
       createtest: false
       inputallfiles: /drone/src/Dependencies
-      inputstartfile: 
+      inputstartfile: No
       projectid: 881861
       testname: "BMT fail test"
       testurl: "https://a.blazemeter.com/app/#/accounts/140171/workspaces/133647/projects/881861/tests/9225544"
