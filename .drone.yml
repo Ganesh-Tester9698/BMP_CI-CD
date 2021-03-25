@@ -10,8 +10,8 @@ steps:
       createtest: false
       inputallfiles: /drone/src/Dependencies
       inputstartfile: No
-      projectid: 881861
-      testname: "BMT fail test"
+      projectid: No
+      testname: No
       testurl: "https://a.blazemeter.com/app/#/accounts/140171/workspaces/133647/projects/881861/tests/9225544"
     image: "poojamutadak/blazemeter:7.0"
     name: create-test
