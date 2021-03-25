@@ -1,20 +1,19 @@
+--- 
 kind: pipeline
 name: default
-
-
-workspace:
+steps: 
+  - 
+    environment: 
+      Uploadfilechk: true
+      apikey: 673e0985b554e480881605e1
+      apisecret: f4077e40595c183537225e9f30a8c08f311d2166bcedb4336be7e49854cc6540e4c159a2
+      createtest: true
+      inputallfiles: /drone/src/Dependencies
+      inputstartfile: BlazeDemoTest.jmx
+      projectid: 881861
+      testname: "Drone Demo"
+      testurl: "https://a.blazemeter.com/app/#/accounts/140171/workspaces/133647/projects/881861/tests/9225544"
+    image: "poojamutadak/blazemeter:7.0"
+    name: create-test
+workspace: 
   path: /drone/src
-  
-steps:
-- name: create-test
-  image: poojamutadak/blazemeter:7.0
-  environment:   
-    apikey:673e0985b554e480881605e1
-    apisecret:f4077e40595c183537225e9f30a8c08f311d2166bcedb4336be7e49854cc6540e4c159a2
-    testname: Drone Demo
-    projectid: 881861
-    createtest: true
-    inputstartfile: BlazeDemoTest.jmx
-    inputallfiles: /drone/src/Dependencies
-    testurl: https://a.blazemeter.com/app/#/accounts/140171/workspaces/133647/projects/881861/tests/9225544
-    Uploadfilechk: true
